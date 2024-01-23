@@ -10,7 +10,9 @@ const Question1 = () => {
 
   return (
     <div>
-      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleLogin}>
+        {isUserLogin ? 'Log out' : 'Log in'}
+      </button>
       {isUserLogin ? <h1>Welcome User!</h1> : <h1>Please Log In</h1>}
     </div>
   );

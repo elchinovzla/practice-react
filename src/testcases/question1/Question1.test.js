@@ -10,15 +10,15 @@ test('renders initial login message', () => {
 test('renders welcome user if the login button is clicked once', () => {
   render(<Question1 />);
 
-  fireEvent.click(screen.getByText('Login'));
+  fireEvent.click(screen.getByText('Log in'));
   const loggedInMessage = screen.getByText('Welcome User!');
   expect(loggedInMessage).toBeVisible();
 });
 
 test('redners initial login message again if login button is clickec twice', () => {
   render(<Question1 />);
-  fireEvent.click(screen.getByText('Login'));
-  fireEvent.click(screen.getByText('Login'));
+  fireEvent.click(screen.getByText('Log in'));
+  fireEvent.click(screen.getByText('Log out'));
   const loggedOutMessage = screen.getByText('Please Log In');
   expect(loggedOutMessage).toBeVisible();
 });
